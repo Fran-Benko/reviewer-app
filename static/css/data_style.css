@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color:black;
+    background-color: white;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#banner {
+    width: 100%;
+    height: 50px;
+    padding-bottom: 25px;
+    background-image: url("../imagen_letras.jpg");
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+
+#banner h1 {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: white 1px 1px 2px;
+}
+
+.nav ul {
+    margin: 0;
+    padding-top: 30px;
+    
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0 5%;
+}
+
+.nav a {
+    padding: .5em;
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: gray;
+}
+
+.nav a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    text-align: center;
+}
+
+#article_1 {
+    padding: 5%;
+    padding-top: 50px;
+}
+
+.img-home {
+    float: inline-start;
+    height: 20%;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+.pie-pagina {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    background-image: url("../imagen_letras.jpg");
+    background-color: rgba(255, 255, 255, .5);
+    background-blend-mode: hue;
+    background-size: cover;
+}
+
+.pie-pagina p {
+    font-size: 26px;
+    font-weight: bold;
+    padding-left: 70%;
+    display: block;
+    text-shadow: white 1px 1px 2px;
+}

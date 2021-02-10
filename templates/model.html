@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<HTML>
+
+    <link rel=StyleSheet href="static/css/model_style.css" type="text/css">
+    
+    <head>
+        <title>Modelo</title>
+    </head>
+
+    <body>
+        <header id="banner">
+            <h1>Procesamiento del Lenguaje Natural</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index">HOME</a></li>
+                <li><a href="data">DATA</a></li>
+                <li><a href="model">MODEL</a></li>
+
+            </ul>
+        </nav>
+
+        <section id="wrapper">
+            <article id="article_1">
+
+                  <h2>Ingrese su opinion sobre el hotel. (Ingles)</h2>
+                  
+                  
+                  <form action="{{ url_for('predict')}}" method="post">
+                    <textarea id='text_box' name='text_box' placeholder="Comparte tu opinión!"></textarea>
+                    <input type="submit">
+                  </form>
+
+                      
+                  <br>
+                  <br>
+                  
+                  <h3>La opinion corresponde a un hotel de:</h3>
+
+                  <section id="output">
+                    <p>La review recibida es: {{ text }}</p>
+
+
+                      {%if data == 5%}
+                      <h1>5 estrellas</h1>  
+                      <img class="img-star" src="static/5-star.png">  
+
+                      {%elif data == 4%}
+                      <h1>4 estrellas</h1>  
+                      <img class="img-star" src="static/4-star.png">
+
+                      {%elif data == 3%}
+                      <h1>3 estrellas</h1>  
+                      <img class="img-star" src="static/3-star.png">
+
+                      {%elif data == 2%}
+                      <h1>2 estrellas</h1>  
+                      <img class="img-star" src="static/2-star.png">
+
+                      {%elif data == 1%}
+                      <h1>1 estrellas</h1>  
+                      <img class="img-star" src="static/1-star.png">
+                      
+                      {%else%}
+                      <h1>Cargar tu review y darle a analizar. Tener en cuenta que las reviews deben estar en Ingles.</h1>
+
+                      {%endif%}
+                  </section>                    
+                
+                
+            
+            </article>
+        </section>
+        
+        <footer class="pie-pagina">
+            <p>Franco Benko - 2020</p>
+        </footer>
+    </body>
+
+    
+
+</HTML>
